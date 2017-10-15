@@ -11,7 +11,7 @@ class PagesController < ApplicationController
 
 	def contest
 		flash[:notice] = "Sorry, the contest has ended!"
-		redirect_to '/welcome'
+		redirect_to root_path
 	end
 
 	def kitten
@@ -28,7 +28,7 @@ class PagesController < ApplicationController
 	def secrets
 		if params[:magic_word] != 'michelle'
 			flash[:alert] = "That's not the secret word! Try again :3"
-			redirect_to '/welcome'
+			redirect_to root_path
 		end
 	end
 
